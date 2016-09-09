@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
@@ -23,7 +22,6 @@ public class MetaDataHandler{
     //----------------------------------------- READ META DATA --------------------------------------------------------//
     private static final String TAG = "ROADSOFT_LOG";
     private static MediaMetadataRetriever retriever;
-    private static Map<String, String> videoMap = new HashMap<String,String>();
 
     public Map<String, String> readMetaData(Context context, Uri data) {
 

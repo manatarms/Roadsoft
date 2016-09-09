@@ -3,12 +3,8 @@ package com.example.sachinf.roadsoft;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.widget.Toast;
-
-import java.util.Arrays;
 
 /**
  * Created by sachinf on 8/29/2016.

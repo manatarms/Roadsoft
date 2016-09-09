@@ -25,7 +25,7 @@ import java.util.UUID;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private static final int MY_PERMISSIONS_REQUEST_CODE = 0;
+    private static final int PERMISSIONS_REQUEST_CODE = 0;
 
     private static boolean monitorLocation = true;
     private static boolean insertLocationIntoDatabase = false;
@@ -172,7 +172,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_CODE: {
+            case PERMISSIONS_REQUEST_CODE: {
                 if (grantResults.length > 0 ) {
                     for(int i=0;i<grantResults.length;i++){
                         if(grantResults[i] == PackageManager.PERMISSION_GRANTED){

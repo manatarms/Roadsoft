@@ -2,10 +2,8 @@ package com.example.sachinf.roadsoft;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -16,7 +14,6 @@ public final class SQLHelperHandler extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 1;
 //    private static long FOREIGN_KEY;
 
-    private String currentSession;
     private String sessionID;
     private Long result;
 
@@ -151,6 +148,7 @@ public final class SQLHelperHandler extends SQLiteOpenHelper{
         return db.delete(LAT_LNG_TABLE_NAME, LAT_LNG_TABLE_COLUMN_SESSION_ID + " = ?" ,new String[]{ MapsActivity.getSessionId()}) > 0;
 
     }
+
 
     public void makeDatabaseResultToast(Context context,Boolean result,int saveType){
         CharSequence text;

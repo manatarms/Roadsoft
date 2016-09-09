@@ -9,7 +9,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -90,12 +89,12 @@ public class LocationHandler {
 
     private void locationChangeHandler(Context context,Location location,GoogleMap mMap,TextView latlngText,SQLHelperHandler sqlHelperHandler) {
         latlng = new LatLng(location.getLatitude(), location.getLongitude());
-        latlngString = latlng.toString();
+        latlngString = latlng.toString().toUpperCase();
         sessionID =  MapsActivity.getSessionId();
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latlng));
         timestamp = timeHandler.getSystemTime().toString();
         speed = String.valueOf(location.getSpeed());
-        latlngText.setText(latlngString + " AT: " + timestamp +" SPEED: "+ speed+"\n" + latlngText.getText());
+        latlngText.setText("\n " +latlngString + "\n TIME: " + timestamp +"\n SPEED: "+ speed+"\n-----------------------\n" + latlngText.getText());
         if(MapsActivity.isInsertLocationIntoDatabase()){
             boolean result = sqlHelperHandler.insertLatLngData(latlngString,timestamp, speed);
             if(currentSession != sessionID) {

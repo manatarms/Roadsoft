@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.MediaStore;
-import android.widget.Toast;
 
 /**
  * Created by sachinf on 8/26/2016.

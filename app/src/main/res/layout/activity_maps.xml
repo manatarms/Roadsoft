@@ -19,7 +19,7 @@
         android:id="@+id/latlngtextView"
         android:scrollIndicators="right"
         android:scrollbars="vertical"
-        android:text="Waiting for location..."
+        android:text=" Waiting for location..."
         android:textColor="#ffffff"
         android:textStyle="bold"
         android:background="#000000" />
