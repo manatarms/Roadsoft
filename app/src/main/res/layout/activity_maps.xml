@@ -1,0 +1,60 @@
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal">
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="fill_parent"
+    android:layout_height="259dp"
+    tools:context="com.example.sachinf.roadsoft.MapsActivity" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/latlngtextView"
+        android:scrollIndicators="right"
+        android:scrollbars="vertical"
+        android:text="Waiting for location..."
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:background="#000000" />
+
+</LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/record_video"
+        android:id="@+id/recordButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/holo_green_light"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:enabled="false" />
+
+
+
+    <ToggleButton
+        android:layout_height="wrap_content"
+        android:textOn="@string/stop_location_string"
+        android:textOff="@string/start_location_string"
+        android:id="@+id/locationToggle"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart ="true"
+        android:layout_alignTop="@+id/recordButton"
+        android:layout_width="100dp"
+        android:layout_alignParentEnd="false"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:checked="true" />
+
+
+</RelativeLayout>
